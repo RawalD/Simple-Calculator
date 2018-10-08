@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Calculator While Bored</title>
+		<script>
+let numberOne = Number(prompt('Enter number'));
+let secondNum = Number(prompt('Enter second number'));
+let choice = prompt('Pick your selection \n+ \n- \n* \n/');
+let sum;
+			
+function writeToHtml(){
+	
+	document.getElementById("equation").innerHTML = document.write(`Your Sum Was ${numberOne} ${choice} ${secondNum} = ${sum}`);
+	
+}			
+
+switch(choice)
+	{
+		case '+': sum = numberOne + secondNum;
+			alert(sum);
+			writeToHtml();
+			break;
+		case '-': sum = numberOne - secondNum;
+			alert(sum);
+			writeToHtml();
+			break;
+		case '*': sum = numberOne * secondNum;
+			alert(sum);
+			writeToHtml();
+			break;
+		case '/': sum = numberOne / secondNum;
+			alert(sum);
+			writeToHtml();
+			break;
+		default: alert('No valid selection');	
+	}
+		</script>	
+		
+		<style>
+			body{
+				background-color: aqua;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="equation">
+		<h1></h1>
+		</div>
+	</body>
+</html>
